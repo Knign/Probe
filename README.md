@@ -1,8 +1,6 @@
 <h1>Port scanner</h1>
 
-Basic nmap-like scanner that returns services running on open ports
+Upgraded version of portscanner that returns services running on open ports
 <br>
 <br>
-- <h3>Preview</h3>
-
-
+- <h2>Preview</h2>
