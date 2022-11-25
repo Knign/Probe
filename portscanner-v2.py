@@ -14,7 +14,7 @@ def printServiceOnPort(port, protocol):
     startTime = time.time()
 
     try:
-        for port in range(1, 200):
+        for port in range(1, 5000):
             s = socket(AF_INET, SOCK_STREAM)
             setdefaulttimeout(1)
 
