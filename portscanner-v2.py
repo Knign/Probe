@@ -2,8 +2,6 @@
 
 from socket import *
 import sys
-import time
-startTime = time.time()
 
 host = input("Enter a remote host to scan: ")
 hostIP = gethostbyname(host)
@@ -35,5 +33,3 @@ printServiceOnPort(80, "tcp");
 printServiceOnPort(443, "tcp");
 printServiceOnPort(20, "udp");
 printServiceOnPort(21, "udp");
-
-print('Scanning Completed in ', time.time() - startTime)
