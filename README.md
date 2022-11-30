@@ -1,6 +1,3 @@
 <h1>Threaded Port Scanner</h1>
 
-Upgraded version of portscanner that returns services running on open ports
-<br>
-<br>
-<h2>Preview</h2>
+Port scanner that scans 500 ports simultaneously
