@@ -6,5 +6,5 @@ Port scanner that scans 500 ports simultaneously
 <h2>Usage</h2>
 
 ```
-python portscanner-v1.py 127.0.0.1 -p 1-100
+python threadedscanner-v1.py 127.0.0.1 -p 1-100
 ```
