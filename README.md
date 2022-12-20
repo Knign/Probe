@@ -1,7 +1,6 @@
 <h1>Threaded Port Scanner</h1>
 
-Port scanner that scans 500 ports simultaneously
-<br>
+  - Port scanner that scans 500 ports simultaneously
 <br>
 <h2>Usage</h2>
 
