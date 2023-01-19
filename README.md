@@ -1,10 +1,7 @@
 # Threaded Port Scanner
-
-  - Uses threads which allow for fast scans
-<br>
+Port scanner made using multithreading in order to increase speed
 
 ## Usage
-
 ```
 python threadedscanner-v1.py x.x.x.x -p 1-100
 ```
