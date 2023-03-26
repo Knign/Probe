@@ -1,5 +1,5 @@
 # Threaded Port Scanner
-Port scanner made using multithreading in order to increase speed
+Prints the open ports along with the services running
 
 ## Usage
 ```
