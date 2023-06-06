@@ -14,12 +14,15 @@ parser.add_argument("host", help="Host to scan.")
 
 # Obtaining the port range
 # If no arguments are parsed, the default port range (1-65535) is selected
-parser.add_argument("--ports", "-p", dest="port_range", default="1-65535", help="Port range to scan, default is 1-65535 (all ports)")
+parser.add_argument("-p", "--ports", dest="port_range", default="1-65535", help="Port range to scan, default is 1-65535 (all ports)")
+
+# Obtain the number of threads
+parser.add_argument("-t", "--threads", dest="threads", default=50, help="Specify Threads(Default 600 (MAX - 849))")
 
 args = parser.parse_args()
-host, port_range = args.host, args.port_range
+host, port_range, threads = args.host, args.port_range, args.threads
 
-print("Please wait, scanning remote host", host)
+print("Scanning remote host", host)
 
 # Obtaining starting port and ending port from range
 start_port, end_port = port_range.split("-")
@@ -37,15 +40,18 @@ def portScan(port):
         # Checking if port is open
         # s.connect_ex() returns an error instead of raising exception
         if s.connect_ex((host, port)) == 0:
-            return True
+            print("Port " + str(port) + " is open")
         s.close()
 
     except KeyboardInterrupt:
-        return False
+        print("\nExiting Program")
+        sys.exit()
     except gaierror:
-        return False
+        print("\nHostname Could Not Be Resolved")
+        sys.exit()
     except error:
-        return False
+        print("\nServer not responding")
+        sys.exit()
 
 def fill_queue(port_list):
     for port in port_list:
@@ -62,7 +68,7 @@ fill_queue(port_list)
 
 thread_list = []
 
-for t in range(500):
+for t in range(int(threads)):
     thread = threading.Thread(target=worker)
     thread_list.append(thread)
 
@@ -72,5 +78,5 @@ for thread in thread_list:
 for thread in thread_list:
     thread.join()
 
-# Printing time required for process to complete
+# Print time required for process to complete
 print('Scanning Completed in ' + str(time.time() - startTime) + ' seconds')
