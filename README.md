@@ -1,5 +1,5 @@
 # Threaded Port Scanner
-Prints the open ports along with the services running
+Portscanner that implements multithreading for swift scans.
 
 ## Usage
 ```
