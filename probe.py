@@ -13,8 +13,8 @@ parser = argparse.ArgumentParser(description="Simple port scanner")
 parser.add_argument("host", help="Host to scan.")
 
 # Obtaining the port range
-# If no arguments are parsed, the default port range (1-65535) is selected
-parser.add_argument("-p", "--ports", dest="port_range", default="1-65535", help="Port range to scan, default is 1-65535 (all ports)")
+# If no arguments are parsed, the default port range (1-1023) is selected
+parser.add_argument("-p", "--ports", dest="port_range", default="1-1023", help="Port range to scan, default is 1-65535 (all ports)")
 
 # Obtain the number of threads
 parser.add_argument("-t", "--threads", dest="threads", default=50, help="Specify Threads(Default 600 (MAX - 849))")
