@@ -9,6 +9,6 @@ probe.py [HOST]
         [HOST]                      Address of host to be scanned
     
     Options:
-        -p, --ports <int>-<int>     Range of ports to be scanned (default: 1-65535)
+        -p, --ports <int>-<int>     Range of ports to be scanned (default: 1-1036)
         -t, --threads <int>         Number of threads to be created (default: 50)
 ```
