@@ -20,7 +20,7 @@ probe.py [HOST]
         -p, --ports <int>-<int>     Range of ports to be scanned (default: 1-1036)
         -t, --threads <int>         Number of threads to be created (default: 50)
 ```
-## Example
+## Examples
 ### Scanning an IP address:
 ```
 python3 probe.py 127.0.0.1
